@@ -6,7 +6,7 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 const ImagesScreen = () => {
   return (
     <SafeAreaView style={{marginBottom: 50}}>
-      <ScrollView showsVerticalScrollIndicator={false}>
+      <ScrollView testID='scrollView' showsVerticalScrollIndicator={false}>
         <ImageComponents title="Europe" />
         <ImageComponents title="USA / Canada" />
         <ImageComponents title="Asia" />
@@ -14,6 +14,8 @@ const ImagesScreen = () => {
     </SafeAreaView>
   );
 };
+
+
 
 ImagesScreen.navigationOptions = {
   headerTitle: 'Cities',

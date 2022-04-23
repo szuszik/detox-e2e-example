@@ -6,8 +6,11 @@ const ImageComponents = ({title}) => {
   const cities =
     title === 'Europe' ? europe : title === 'Asia' ? asia : usacanada;
 
+  const region = 
+    title === 'Europe' ? 'europe' : title === 'Asia' ? 'asia' : 'usaCanada';
+  
   return (
-    <ScrollView>
+    <ScrollView testID={`${region}View`}>
       <View style={styles.headerContainer}>
         <Text style={styles.headerText}>{title}</Text>
       </View>
@@ -21,6 +24,7 @@ const ImageComponents = ({title}) => {
             <View style={styles.imageContainer}>
               <Text style={styles.imageText}>{item.name}</Text>
               <Image
+                testID={`${item.name}Image`}
                 style={styles.image}
                 resizeMode={'cover'}
                 source={item.imagePath}

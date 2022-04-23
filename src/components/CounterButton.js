@@ -1,10 +1,10 @@
 import React from 'react';
 import { View, StyleSheet, Text, TouchableOpacity } from 'react-native';
 
-export default CounterButton = ({ text, onPress, counter }) => {
+export default CounterButton = ({ text, onPress, counter, accessibilityLabel }) => {
   return (
     <View style={styles.view}>
-      <TouchableOpacity onPress={onPress}>
+      <TouchableOpacity onPress={onPress} accessible={true} accessibilityLabel={accessibilityLabel}>
         <View style={styles.button}>
           <Text style={styles.buttonText}>{text}</Text>
         </View>

@@ -30,8 +30,9 @@ const CounterScreen = () => {
 
   return (
     <SafeAreaView style={styles.container} forceInset={{ top: 'always' }}>
-      <View>
+      <View accessibilityLabel='waterCounterLabel' testID='waterCounter'>
         <CounterButton
+          accessibilityLabel='waterCounterButtonLabel'
           text="Water Counter"
           onPress={() => {
             dispatch({ type: 'increase_1', payload });
@@ -39,27 +40,30 @@ const CounterScreen = () => {
           counter={counter_1}
         />
       </View>
-      <View>
+      <View accessibilityLabel='electricityCounterLabel' testID='electricityCounter'>
         <CounterButton
           text="Electricity Counter"
+          accessibilityLabel='electricityCounterButtonLabel'
           onPress={() => {
             dispatch({ type: 'increase_2', payload });
           }}
           counter={counter_2}
         />
       </View>
-      <View>
+      <View accessibilityLabel='gasCounterLabel' testID='gasCounter'>
         <CounterButton
           text="Gas Counter"
+          accessibilityLabel='gasCounterButtonLabel'
           onPress={() => {
             dispatch({ type: 'increase_3', payload });
           }}
           counter={counter_3}
         />
       </View>
-      <View>
+      <View accessibilityLabel='broadbandCounterLabel' testID='broadbandCounter'>
         <CounterButton
           text="Broadband Counter"
+          accessibilityLabel='broadbandCounterButtonLabel'
           onPress={() => {
             dispatch({ type: 'increase_4', payload });
           }}
